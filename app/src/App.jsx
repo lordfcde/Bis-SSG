@@ -47,6 +47,7 @@ function Navbar() {
     { label: 'Giải Pháp', href: '#giai-phap' },
     { label: 'Đổi Mới', href: '#doi-moi' },
     { label: 'Lộ Trình', href: '#lo-trinh' },
+    { label: 'Liên Hệ', href: '#lien-he' },
   ]
 
   return (
@@ -557,29 +558,54 @@ function Contact() {
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__logo">
-        <Zap className="footer__logo-icon" size={24} />
-        Before It Strikes
+      <div className="footer__content">
+        <div className="footer__brand">
+          <div className="footer__logo">
+            <Zap className="footer__logo-icon" size={24} />
+            Before It Strikes
+          </div>
+          <p className="footer__tagline">
+            Sáng kiến phòng ngừa đột quỵ dẫn dắt bởi chuyên gia
+          </p>
+          <div className="footer__social">
+            <a href="#" className="footer__social-link" aria-label="Facebook">
+              <Facebook size={20} />
+            </a>
+            <a href="#" className="footer__social-link" aria-label="Instagram">
+              <Instagram size={20} />
+            </a>
+            <a href="#" className="footer__social-link" aria-label="TikTok">
+              <Music2 size={20} />
+            </a>
+          </div>
+        </div>
+
+        <div className="footer__info">
+          <h4 className="footer__info-title">Đơn Vị Tổ Chức</h4>
+          <p className="footer__info-text">Câu lạc bộ Sinh viên FPT University</p>
+          <p className="footer__info-text">Trường Đại học FPT</p>
+        </div>
+
+        <div className="footer__info">
+          <h4 className="footer__info-title">Địa Chỉ</h4>
+          <p className="footer__info-text">Lô E2a-7, Đường D1, Khu Công nghệ cao</p>
+          <p className="footer__info-text">P. Long Thạnh Mỹ, TP. Thủ Đức</p>
+          <p className="footer__info-text">Thành phố Hồ Chí Minh</p>
+        </div>
+
+        <div className="footer__info">
+          <h4 className="footer__info-title">Liên Kết</h4>
+          <a href="#" className="footer__link">Chính Sách Bảo Mật</a>
+          <a href="#" className="footer__link">Điều Khoản Sử Dụng</a>
+          <a href="#lien-he" className="footer__link">Liên Hệ Hợp Tác</a>
+        </div>
       </div>
-      <div className="footer__social">
-        <a href="#" className="footer__social-link" aria-label="Facebook">
-          <Facebook size={20} />
-        </a>
-        <a href="#" className="footer__social-link" aria-label="Instagram">
-          <Instagram size={20} />
-        </a>
-        <a href="#" className="footer__social-link" aria-label="TikTok">
-          <Music2 size={20} />
-        </a>
+
+      <div className="footer__bottom">
+        <p className="footer__copyright">
+          © 2026 Before It Strikes. Dự án vì sức khỏe cộng đồng.
+        </p>
       </div>
-      <div className="footer__links">
-        <a href="#" className="footer__link">Chính Sách Bảo Mật</a>
-        <a href="#" className="footer__link">Điều Khoản Sử Dụng</a>
-        <a href="#" className="footer__link">Liên Hệ</a>
-      </div>
-      <p className="footer__copyright">
-        © 2026 Before It Strikes. Dự án vì sức khỏe cộng đồng.
-      </p>
     </footer>
   )
 }
