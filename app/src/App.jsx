@@ -495,58 +495,55 @@ function Partners() {
 function Contact() {
   const sectionRef = useScrollReveal()
 
-  const contactInfo = [
-    {
-      icon: <User size={24} />,
-      label: 'Người Liên Hệ',
-      value: 'Nguyễn Văn A',
-      href: null
-    },
-    {
-      icon: <Mail size={24} />,
-      label: 'Email',
-      value: 'contact@beforeitstrikes.vn',
-      href: 'mailto:contact@beforeitstrikes.vn'
-    },
-    {
-      icon: <Phone size={24} />,
-      label: 'Số Điện Thoại',
-      value: '0901 234 567',
-      href: 'tel:0901234567'
-    }
-  ]
-
   return (
     <section id="lien-he" className="section contact" ref={sectionRef}>
       <h2 className="section__title">Hợp Tác & Tài Trợ</h2>
       <p className="section__subtitle">
         Liên hệ với chúng tôi để trở thành đối tác đồng hành
       </p>
-      <div className="contact__container">
-        <div className="contact__icon-main">
-          <Handshake size={48} />
+      <div className="contact__box">
+        <div className="contact__box-header">
+          <Handshake size={40} className="contact__box-icon" />
+          <div>
+            <h3 className="contact__box-title">Thông Tin Liên Hệ</h3>
+            <p className="contact__box-subtitle">Chúng tôi luôn sẵn sàng lắng nghe</p>
+          </div>
         </div>
-        <p className="contact__description">
+
+        <div className="contact__box-content">
+          <div className="contact__row">
+            <User size={22} className="contact__row-icon" />
+            <div className="contact__row-info">
+              <span className="contact__row-label">Người Liên Hệ</span>
+              <span className="contact__row-value">Nguyễn Văn A</span>
+            </div>
+          </div>
+
+          <div className="contact__row">
+            <Mail size={22} className="contact__row-icon" />
+            <div className="contact__row-info">
+              <span className="contact__row-label">Email</span>
+              <a href="mailto:contact@beforeitstrikes.vn" className="contact__row-value contact__row-value--link">
+                contact@beforeitstrikes.vn
+              </a>
+            </div>
+          </div>
+
+          <div className="contact__row">
+            <Phone size={22} className="contact__row-icon" />
+            <div className="contact__row-info">
+              <span className="contact__row-label">Số Điện Thoại</span>
+              <a href="tel:0901234567" className="contact__row-value contact__row-value--link">
+                0901 234 567
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p className="contact__box-note">
           Chúng tôi luôn chào đón các doanh nghiệp và tổ chức muốn đồng hành cùng sứ mệnh
           nâng cao nhận thức về phòng ngừa đột quỵ trong cộng đồng.
         </p>
-        <div className="contact__info-grid">
-          {contactInfo.map((item, index) => (
-            <div className="contact-card" key={index}>
-              <div className="contact-card__icon">{item.icon}</div>
-              <div className="contact-card__content">
-                <span className="contact-card__label">{item.label}</span>
-                {item.href ? (
-                  <a href={item.href} className="contact-card__value">
-                    {item.value}
-                  </a>
-                ) : (
-                  <span className="contact-card__value">{item.value}</span>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
