@@ -458,7 +458,7 @@ function Partners() {
   const sectionRef = useScrollReveal()
 
   const partners = [
-    { name: 'Genetica', logo: '/sponsors/genetica.png' },
+    { name: 'Genetics', logo: '/sponsors/Genetics.png' },
     { name: 'Skillcetera', logo: '/sponsors/Skillcetera_Logo_Den.png' },
     // Add more partners here as needed
   ]
